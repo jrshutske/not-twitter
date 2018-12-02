@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :widgets
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -6,7 +7,12 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  root 'welcome#index'
+  root 'users#index'
+
+  get '/welcome', to: 'welcome#index'
+
+  get '/hello', to: 'application#hello'
+  get '/goodbye', to: 'application#goodbye'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
