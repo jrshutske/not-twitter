@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   resources :users
   resources :widgets
 
-  root 'users#index'
-
+  root 'static_pages#home'
   get 'static_pages/home'
   get 'static_pages/help'
   get 'static_pages/about'
+  get 'static_pages/contact'
 
   get '/welcome', to: 'welcome#index'
   get '/hello', to: 'application#hello'
