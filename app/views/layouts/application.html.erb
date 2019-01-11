@@ -1,54 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= full_title(yield(:title)) %></title>
-  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>  
-  <%= stylesheet_link_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
-  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<nav class="navbar navbar-default navbar-static-top navbar-inverse">
-  <div class="container">
-    <ul class="nav navbar-nav">
-      <li>
-        <a href="/static_pages/home"><span class="glyphicon glyphicon-home"></span> Home</a>
-      </li>
-      <li>
-        <a href="/users"><span class="glyphicon glyphicon-user"></span> Users</a>
-      </li>
-      <li>
-        <a href="/microposts"><span class="glyphicon glyphicon-edit"></span> Microposts</a>
-      </li>
-      <li>
-        <a href="/welcome"><span class="glyphicon glyphicon-tint"></span> Ruby</a>
-      </li>
-      <li>
-        <a href="https://devcenter.heroku.com/articles/how-heroku-works"><span class="glyphicon glyphicon-road"></span> How Heroku Works</a>
-      </li>
-      <li>
-        <a href="/static_pages/about"><span class="glyphicon glyphicon-question-sign"></span> About</a>
-      </li>
-      <li>
-        <a href="/static_pages/contact"><span class="glyphicon glyphicon-transfer"></span> Contact</a>
-      </li>
-      <li>
-        <a href="/static_pages/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="navbar-right">
-        <a href="https://devcenter.heroku.com"><span class="glyphicon glyphicon-book"></span> Heroku Dev Center</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="container">
-<%= yield %>
-</div>
-
-
-</body>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= render 'layouts/rails_default' %>
+    <%= render 'layouts/shim' %>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="container main">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
+  </body>
 </html>
