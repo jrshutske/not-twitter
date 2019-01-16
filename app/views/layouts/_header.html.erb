@@ -14,13 +14,13 @@
       <% if logged_in? %>
       <li class="dropdown active"> 
         <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Account</a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", '#' %></li>
-              <li class="divider"></li>
-              <li><%= link_to "Log out", logout_path, method: :delete %></li>
-            </ul>
-          </li>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Profile", current_user %></li>
+          <li><%= link_to "Settings", '#' %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Log out", logout_path, method: :delete %></li>
+        </ul>
+      </li>
       <% else %>
         <li class="active"><%= link_to "Log in", login_path, class: "nav-link" %></li>
       <% end %>
