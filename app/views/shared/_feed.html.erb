@@ -1,0 +1,6 @@
+<% if @feed_items.any? %>
+  <ul class="microposts" style="list-style-type:none; padding: 0;">
+    <%= render @feed_items %>
+  </ul>
+  <%= will_paginate @feed_items %>
+<% end %>

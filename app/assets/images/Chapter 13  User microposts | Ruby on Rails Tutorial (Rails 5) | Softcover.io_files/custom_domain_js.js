@@ -1,0 +1,2 @@
+CustomDomain.setup({
+});

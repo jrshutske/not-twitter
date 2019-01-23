@@ -17,3 +17,6 @@
 
 # Ignore ruby-version
 /.ruby-version
+
+# Ignore uploaded test images.
+/public/uploads

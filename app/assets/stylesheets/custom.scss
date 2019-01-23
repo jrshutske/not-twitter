@@ -25,7 +25,21 @@ a {
         color:cyan;
     }
 }
+.microposts > li {
+  border: 3px solid #A9A9A9;
+  border-radius: 10px;
+  padding: .5em;
+  background-color: #2F4F4F;
+}
+.users > li {
+  border: 3px solid #A9A9A9;
+  border-radius: 10px;
 
+  background-color: #2F4F4F;
+
+  overflow: auto;
+  float: center !important;
+}
 section {
   overflow: auto;
 }
