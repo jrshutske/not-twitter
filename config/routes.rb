@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
   get 'sessions/new'
-  resources :users
+
   resources :microposts,          only: [:create, :destroy]
   resources :account_activations, only: [:edit]
   resources :widgets
+  resources :relationships,       only: [:create, :destroy]
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
   root    'static_pages#home'
   get     '/about',   to: 'static_pages#about'
   get     '/contact', to: 'static_pages#contact'
